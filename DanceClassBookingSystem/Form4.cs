@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace DanceClassBookingSystem
 {
-    public partial class Home : Form
+    public partial class Form4 : Form
     {
-        public Home()
+        public Form4()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
