@@ -1,6 +1,6 @@
 ﻿namespace DanceClassBookingSystem
 {
-    partial class Form3
+    partial class StudentProfiles
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form3";
+            SuspendLayout();
+            // 
+            // StudentProfiles
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(223, 211, 245);
+            ClientSize = new Size(800, 450);
+            Name = "StudentProfiles";
+            Text = "Student Profiles";
+            ResumeLayout(false);
         }
 
         #endregion

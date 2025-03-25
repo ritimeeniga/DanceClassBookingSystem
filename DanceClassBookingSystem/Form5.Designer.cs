@@ -1,6 +1,6 @@
 ﻿namespace DanceClassBookingSystem
 {
-    partial class Form4
+    partial class Reminders
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             SuspendLayout();
             // 
-            // Form4
+            // Reminders
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(223, 211, 245);
             ClientSize = new Size(800, 450);
-            Name = "Form4";
-            Text = "Calendar";
+            Name = "Reminders";
+            Text = "Reminders";
             ResumeLayout(false);
         }
 
