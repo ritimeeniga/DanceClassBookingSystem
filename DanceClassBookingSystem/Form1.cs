@@ -20,7 +20,7 @@ namespace DanceClassBookingSystem
             if (username == "uSeRnAmE" && password == "Passw0rd!")
             {
                 // Open the new form
-                Form2 newForm = new Form2();
+                Home newForm = new Home();
                 newForm.Show();
                 this.Hide();
             }
