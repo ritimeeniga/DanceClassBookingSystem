@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DanceClassBookingSystem
 {
-    public partial class Reminders : Form
+    public partial class ClassCat : Form
     {
-        public Reminders()
+        public ClassCat()
         {
             InitializeComponent();
         }
