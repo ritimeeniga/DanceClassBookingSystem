@@ -60,7 +60,7 @@ namespace DanceClassBookingSystem
             listReminders.TabStop = true;
 
             // Hook up event handlers
-            listReminders.MouseClick += listReminders_MouseClick; // <-- Add this here
+            listReminders.MouseClick += listReminders_MouseClick; 
             button9.Click += button9_Click;
             reminderTimer.Tick += reminderTimer_Tick;
             reminderTimer.Start();
@@ -68,9 +68,9 @@ namespace DanceClassBookingSystem
 
 
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void listReminders_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Reminder selectedreminder = listReminders.SelectedItem as Reminder;      
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -96,8 +96,16 @@ namespace DanceClassBookingSystem
 
         private void reminderTimer_Tick(object sender, EventArgs e)
         {
-            UpdateListBox(); // Update reminders based on the current time
+            // Refresh only the ListBox items text without clearing them
+            for (int i = 0; i < listReminders.Items.Count; i++)
+            {
+                if (listReminders.Items[i] is Reminder reminder)
+                {
+                    listReminders.Items[i] = reminder; // This will trigger ToString() to update the display
+                }
+            }
         }
+
 
         private void UpdateListBox()
         {
@@ -129,14 +137,26 @@ namespace DanceClassBookingSystem
         {
             if (listReminders.SelectedItem is Reminder selectedReminder)
             {
-                reminders.Remove(selectedReminder); // Remove the actual object
+                // Remove the selected reminder
+                reminders.Remove(selectedReminder);
+
+                // Update display
                 UpdateListBox();
+
+                // Exit early if nothing left
+                if (reminders.Count == 0)
+                {
+                    txtDescription.Clear();
+                    return;
+                }
+
             }
             else
             {
                 MessageBox.Show("Please select a reminder to remove.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
 
 
         private void button8_Click(object sender, EventArgs e)

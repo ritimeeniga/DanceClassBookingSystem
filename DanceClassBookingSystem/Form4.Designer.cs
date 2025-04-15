@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             label1 = new Label();
             panel3 = new Panel();
+            button8 = new Button();
             label5 = new Label();
             dtpDueDate = new DateTimePicker();
             txtDescription = new TextBox();
@@ -55,7 +56,6 @@
             linkLabel1 = new LinkLabel();
             label2 = new Label();
             reminderTimer = new System.Windows.Forms.Timer(components);
-            button8 = new Button();
             panel3.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -88,6 +88,17 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(594, 468);
             panel3.TabIndex = 5;
+            // 
+            // button8
+            // 
+            button8.BackColor = Color.FromArgb(223, 211, 245);
+            button8.Location = new Point(489, 262);
+            button8.Name = "button8";
+            button8.Size = new Size(75, 23);
+            button8.TabIndex = 10;
+            button8.Text = "View";
+            button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // label5
             // 
@@ -177,7 +188,7 @@
             listReminders.Name = "listReminders";
             listReminders.Size = new Size(562, 274);
             listReminders.TabIndex = 0;
-            listReminders.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            listReminders.SelectedIndexChanged += listReminders_SelectedIndexChanged;
             // 
             // panel1
             // 
@@ -330,17 +341,6 @@
             // reminderTimer
             // 
             reminderTimer.Tick += reminderTimer_Tick;
-            // 
-            // button8
-            // 
-            button8.BackColor = Color.FromArgb(223, 211, 245);
-            button8.Location = new Point(489, 262);
-            button8.Name = "button8";
-            button8.Size = new Size(75, 23);
-            button8.TabIndex = 10;
-            button8.Text = "View";
-            button8.UseVisualStyleBackColor = false;
-            button8.Click += button8_Click;
             // 
             // Reminders
             // 
