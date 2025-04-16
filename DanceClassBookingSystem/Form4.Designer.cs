@@ -293,6 +293,7 @@
             linkLabel4.TabIndex = 4;
             linkLabel4.TabStop = true;
             linkLabel4.Text = "Class Catalogue";
+            linkLabel4.LinkClicked += linkLabel4_LinkClicked;
             // 
             // linkLabel3
             // 

@@ -60,7 +60,7 @@ namespace DanceClassBookingSystem
             listReminders.TabStop = true;
 
             // Hook up event handlers
-            listReminders.MouseClick += listReminders_MouseClick; 
+            listReminders.MouseClick += listReminders_MouseClick;
             button9.Click += button9_Click;
             reminderTimer.Tick += reminderTimer_Tick;
             reminderTimer.Start();
@@ -70,7 +70,7 @@ namespace DanceClassBookingSystem
 
         private void listReminders_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Reminder selectedreminder = listReminders.SelectedItem as Reminder;      
+            Reminder selectedreminder = listReminders.SelectedItem as Reminder;
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -183,6 +183,12 @@ namespace DanceClassBookingSystem
             {
                 listReminders.SelectedIndex = index; // Select the clicked item
             }
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ClassCat newForm = new ClassCat();
+            newForm.Show();
         }
     }
 }

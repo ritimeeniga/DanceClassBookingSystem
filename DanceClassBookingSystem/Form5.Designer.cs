@@ -240,7 +240,7 @@
             // 
             // button7
             // 
-            button7.Image = Properties.Resources.plusbutton_removebg_preview;
+            //button7.Image = Properties.Resources.plusbutton_removebg_preview;
             button7.Location = new Point(405, 245);
             button7.Name = "button7";
             button7.Size = new Size(159, 198);
@@ -249,7 +249,7 @@
             // 
             // button8
             // 
-            button8.Image = Properties.Resources.plusbutton_removebg_preview;
+            //button8.Image = Properties.Resources.plusbutton_removebg_preview;
             button8.Location = new Point(221, 243);
             button8.Name = "button8";
             button8.Size = new Size(159, 198);
