@@ -189,6 +189,12 @@ namespace DanceClassBookingSystem
         {
             ClassCat newForm = new ClassCat();
             newForm.Show();
+            this.Hide();
+        }
+
+        private void Reminders_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

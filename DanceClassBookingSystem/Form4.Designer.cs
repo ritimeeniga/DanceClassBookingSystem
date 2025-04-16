@@ -354,6 +354,7 @@
             Controls.Add(panel1);
             Name = "Reminders";
             Text = "Reminders";
+            Load += Reminders_Load;
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel1.ResumeLayout(false);

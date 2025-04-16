@@ -51,6 +51,7 @@
             button10 = new Button();
             button11 = new Button();
             button12 = new Button();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -202,6 +203,7 @@
             linkLabel2.TabIndex = 2;
             linkLabel2.TabStop = true;
             linkLabel2.Text = "Home";
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
             // 
             // linkLabel1
             // 
@@ -240,57 +242,81 @@
             // 
             // button7
             // 
-            //button7.Image = Properties.Resources.plusbutton_removebg_preview;
+            button7.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button7.ForeColor = Color.FromArgb(192, 0, 0);
             button7.Location = new Point(405, 245);
             button7.Name = "button7";
             button7.Size = new Size(159, 198);
             button7.TabIndex = 5;
+            button7.Text = "click to add";
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // button8
             // 
-            //button8.Image = Properties.Resources.plusbutton_removebg_preview;
+            button8.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button8.ForeColor = Color.FromArgb(192, 0, 0);
             button8.Location = new Point(221, 243);
             button8.Name = "button8";
             button8.Size = new Size(159, 198);
             button8.TabIndex = 4;
+            button8.Text = "click to add";
             button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
             // 
             // button9
             // 
+            button9.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic);
             button9.Location = new Point(35, 243);
             button9.Name = "button9";
             button9.Size = new Size(159, 198);
             button9.TabIndex = 3;
-            button9.Text = "button9";
+            button9.Text = "BALLROOM";
             button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
             // 
             // button10
             // 
+            button10.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic);
             button10.Location = new Point(405, 32);
             button10.Name = "button10";
             button10.Size = new Size(159, 198);
             button10.TabIndex = 2;
-            button10.Text = "button10";
+            button10.Text = "HIP-HOP";
             button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
             // 
             // button11
             // 
+            button11.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic);
+            button11.ImageAlign = ContentAlignment.BottomRight;
             button11.Location = new Point(221, 32);
             button11.Name = "button11";
             button11.Size = new Size(159, 198);
             button11.TabIndex = 1;
-            button11.Text = "button11";
+            button11.Text = "BALLET";
             button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
             // 
             // button12
             // 
+            button12.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            button12.ImageAlign = ContentAlignment.TopRight;
             button12.Location = new Point(35, 32);
             button12.Name = "button12";
             button12.Size = new Size(159, 198);
             button12.TabIndex = 0;
-            button12.Text = "button12";
+            button12.Text = "JAZZ";
             button12.UseVisualStyleBackColor = true;
+            button12.Click += button12_Click;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.BackColor = Color.Silver;
+            flowLayoutPanel1.Location = new Point(428, 20);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(200, 100);
+            flowLayoutPanel1.TabIndex = 11;
             // 
             // ClassCat
             // 
@@ -299,6 +325,7 @@
             BackColor = Color.FromArgb(223, 211, 245);
             ClientSize = new Size(975, 584);
             Controls.Add(panel3);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(label2);
             Controls.Add(panel1);
             Controls.Add(label1);
@@ -338,5 +365,6 @@
         private Button button10;
         private Button button11;
         private Button button12;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

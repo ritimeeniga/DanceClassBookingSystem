@@ -12,7 +12,8 @@ namespace DanceClassBookingSystem
 {
     public partial class StudentProfiles : Form
     {
-        private List<string> students = new List<string>();
+        private List<string> students => AppData.Students;
+
         public StudentProfiles()
         {
             InitializeComponent();

@@ -1,6 +1,6 @@
 ﻿namespace DanceClassBookingSystem
 {
-    partial class JazzClass
+    partial class BallroomClass
     {
         /// <summary>
         /// Required designer variable.
@@ -41,33 +41,30 @@
             panel3.Controls.Add(button9);
             panel3.Controls.Add(button7);
             panel3.Controls.Add(listBox1);
-            panel3.Location = new Point(0, -2);
+            panel3.Location = new Point(1, -9);
             panel3.Name = "panel3";
-            panel3.Size = new Size(594, 409);
-            panel3.TabIndex = 3;
-            panel3.Paint += panel3_Paint;
+            panel3.Size = new Size(594, 408);
+            panel3.TabIndex = 4;
             // 
             // button9
             // 
             button9.BackColor = Color.FromArgb(223, 211, 245);
-            button9.Location = new Point(150, 333);
+            button9.Location = new Point(157, 332);
             button9.Name = "button9";
             button9.Size = new Size(117, 37);
             button9.TabIndex = 5;
             button9.Text = "REMOVE";
             button9.UseVisualStyleBackColor = false;
-            button9.Click += button9_Click;
             // 
             // button7
             // 
             button7.BackColor = Color.FromArgb(223, 211, 245);
-            button7.Location = new Point(16, 333);
+            button7.Location = new Point(16, 332);
             button7.Name = "button7";
             button7.Size = new Size(117, 37);
             button7.TabIndex = 1;
             button7.Text = "ADD";
             button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click;
             // 
             // listBox1
             // 
@@ -79,16 +76,14 @@
             listBox1.Size = new Size(562, 274);
             listBox1.TabIndex = 0;
             // 
-            // JazzClass
+            // BallroomClass
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(223, 211, 245);
-            ClientSize = new Size(591, 393);
+            ClientSize = new Size(595, 381);
             Controls.Add(panel3);
-            Name = "JazzClass";
-            Text = "JazzClass";
-            Load += Form6_Load;
+            Name = "BallroomClass";
+            Text = "Form9";
             panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
