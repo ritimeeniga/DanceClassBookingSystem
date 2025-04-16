@@ -196,5 +196,10 @@ namespace DanceClassBookingSystem
         {
 
         }
+
+        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

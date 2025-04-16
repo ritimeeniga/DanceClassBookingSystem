@@ -51,7 +51,15 @@ namespace DanceClassBookingSystem
 
         private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            DialogResult result = MessageBox.Show(
+                "Would you like to sign out?","Confirm Sign Out",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
 
+            if (result == DialogResult.OK)
+            {
+                Login newlogin = new Login();
+                newlogin.Show();
+                this.Close();   
+            }
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

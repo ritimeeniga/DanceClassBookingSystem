@@ -58,18 +58,38 @@ namespace DanceClassBookingSystem
 
         private void button8_Click(object sender, EventArgs e)
         {
-            // Open the popup form to enter a class name
             using (AddClass popup = new AddClass())
             {
                 if (popup.ShowDialog() == DialogResult.OK)
                 {
                     string className = popup.ClassName;
-                    AddClassButton(className);
+
+                    // 1. Get the index of the add button
+                    int index = flowLayoutPanel1.Controls.GetChildIndex(button8);
+
+                    // 2. Create new button
+                    Button newClassButton = new Button();
+                    newClassButton.Text = className;
+                    newClassButton.Size = button8.Size;
+                    newClassButton.Font = button8.Font;
+                    newClassButton.BackColor = button8.BackColor;
+                    newClassButton.AutoSize = button8.AutoSize;
+
+                    newClassButton.Click += (s, args) =>
+                    {
+                        var classForm = new DynamicClassForm(className);
+                        classForm.ShowDialog();
+                    };
+
+                    // 3. Replace in FlowLayoutPanel
+                    flowLayoutPanel1.Controls.RemoveAt(index);
+                    flowLayoutPanel1.Controls.Add(newClassButton);
+                    flowLayoutPanel1.Controls.SetChildIndex(newClassButton, index);
                 }
             }
         }
 
-       private void btnAddClass_Click(object sender, EventArgs e)
+        private void btnAddClass_Click(object sender, EventArgs e)
         {
             using (AddClass popup = new AddClass())
             {
@@ -113,8 +133,40 @@ namespace DanceClassBookingSystem
 
         private void button7_Click(object sender, EventArgs e)
         {
-            AddClass newClass2 = new AddClass();
-            newClass2.Show();
+            using (AddClass popup = new AddClass())
+            {
+                if (popup.ShowDialog() == DialogResult.OK)
+                {
+                    string className = popup.ClassName;
+
+                    // 1. Get the index of the add button
+                    int index = flowLayoutPanel1.Controls.GetChildIndex(button8);
+
+                    // 2. Create new button
+                    Button newClassButton2 = new Button();
+                    newClassButton2.Text = className;
+                    newClassButton2.Size = button7.Size;
+                    newClassButton2.Font = button7.Font;
+                    newClassButton2.BackColor = button7.BackColor;
+                    newClassButton2.AutoSize = button7.AutoSize;
+
+                    newClassButton2.Click += (s, args) =>
+                    {
+                        var classForm = new DynamicClassForm(className);
+                        classForm.ShowDialog();
+                    };
+
+                    // 3. Replace in FlowLayoutPanel
+                    flowLayoutPanel1.Controls.RemoveAt(index);
+                    flowLayoutPanel1.Controls.Add(newClassButton2);
+                    flowLayoutPanel1.Controls.SetChildIndex(newClassButton2, index);
+                }
+            }
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

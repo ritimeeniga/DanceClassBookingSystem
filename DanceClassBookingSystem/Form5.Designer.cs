@@ -44,7 +44,6 @@
             linkLabel2 = new LinkLabel();
             linkLabel1 = new LinkLabel();
             label4 = new Label();
-            panel3 = new Panel();
             button7 = new Button();
             button8 = new Button();
             button9 = new Button();
@@ -54,7 +53,7 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            panel3.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -226,27 +225,13 @@
             label4.TabIndex = 0;
             label4.Text = "QUICK LINKS";
             // 
-            // panel3
-            // 
-            panel3.BackColor = Color.Silver;
-            panel3.Controls.Add(button7);
-            panel3.Controls.Add(button8);
-            panel3.Controls.Add(button9);
-            panel3.Controls.Add(button10);
-            panel3.Controls.Add(button11);
-            panel3.Controls.Add(button12);
-            panel3.Location = new Point(305, 83);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(594, 468);
-            panel3.TabIndex = 10;
-            // 
             // button7
             // 
             button7.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button7.ForeColor = Color.FromArgb(192, 0, 0);
-            button7.Location = new Point(405, 245);
+            button7.Location = new Point(383, 236);
             button7.Name = "button7";
-            button7.Size = new Size(159, 198);
+            button7.Size = new Size(180, 221);
             button7.TabIndex = 5;
             button7.Text = "click to add";
             button7.UseVisualStyleBackColor = true;
@@ -256,9 +241,9 @@
             // 
             button8.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button8.ForeColor = Color.FromArgb(192, 0, 0);
-            button8.Location = new Point(221, 243);
+            button8.Location = new Point(194, 236);
             button8.Name = "button8";
-            button8.Size = new Size(159, 198);
+            button8.Size = new Size(183, 221);
             button8.TabIndex = 4;
             button8.Text = "click to add";
             button8.UseVisualStyleBackColor = true;
@@ -267,9 +252,9 @@
             // button9
             // 
             button9.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic);
-            button9.Location = new Point(35, 243);
+            button9.Location = new Point(3, 236);
             button9.Name = "button9";
-            button9.Size = new Size(159, 198);
+            button9.Size = new Size(185, 221);
             button9.TabIndex = 3;
             button9.Text = "BALLROOM";
             button9.UseVisualStyleBackColor = true;
@@ -278,9 +263,9 @@
             // button10
             // 
             button10.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic);
-            button10.Location = new Point(405, 32);
+            button10.Location = new Point(383, 3);
             button10.Name = "button10";
-            button10.Size = new Size(159, 198);
+            button10.Size = new Size(180, 227);
             button10.TabIndex = 2;
             button10.Text = "HIP-HOP";
             button10.UseVisualStyleBackColor = true;
@@ -290,9 +275,9 @@
             // 
             button11.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic);
             button11.ImageAlign = ContentAlignment.BottomRight;
-            button11.Location = new Point(221, 32);
+            button11.Location = new Point(194, 3);
             button11.Name = "button11";
-            button11.Size = new Size(159, 198);
+            button11.Size = new Size(183, 227);
             button11.TabIndex = 1;
             button11.Text = "BALLET";
             button11.UseVisualStyleBackColor = true;
@@ -302,9 +287,9 @@
             // 
             button12.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             button12.ImageAlign = ContentAlignment.TopRight;
-            button12.Location = new Point(35, 32);
+            button12.Location = new Point(3, 3);
             button12.Name = "button12";
-            button12.Size = new Size(159, 198);
+            button12.Size = new Size(185, 227);
             button12.TabIndex = 0;
             button12.Text = "JAZZ";
             button12.UseVisualStyleBackColor = true;
@@ -313,9 +298,15 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.BackColor = Color.Silver;
-            flowLayoutPanel1.Location = new Point(428, 20);
+            flowLayoutPanel1.Controls.Add(button12);
+            flowLayoutPanel1.Controls.Add(button11);
+            flowLayoutPanel1.Controls.Add(button10);
+            flowLayoutPanel1.Controls.Add(button9);
+            flowLayoutPanel1.Controls.Add(button8);
+            flowLayoutPanel1.Controls.Add(button7);
+            flowLayoutPanel1.Location = new Point(305, 83);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(200, 100);
+            flowLayoutPanel1.Size = new Size(570, 468);
             flowLayoutPanel1.TabIndex = 11;
             // 
             // ClassCat
@@ -323,8 +314,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(223, 211, 245);
-            ClientSize = new Size(975, 584);
-            Controls.Add(panel3);
+            ClientSize = new Size(955, 584);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(label2);
             Controls.Add(panel1);
@@ -335,7 +325,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
-            panel3.ResumeLayout(false);
+            flowLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -358,7 +348,6 @@
         private LinkLabel linkLabel2;
         private LinkLabel linkLabel1;
         private Label label4;
-        private Panel panel3;
         private Button button7;
         private Button button8;
         private Button button9;

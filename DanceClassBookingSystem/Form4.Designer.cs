@@ -282,6 +282,7 @@
             linkLabel5.TabIndex = 5;
             linkLabel5.TabStop = true;
             linkLabel5.Text = "User Profile";
+            linkLabel5.LinkClicked += linkLabel5_LinkClicked;
             // 
             // linkLabel4
             // 
