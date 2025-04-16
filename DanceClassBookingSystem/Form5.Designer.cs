@@ -168,6 +168,7 @@
             linkLabel5.TabIndex = 5;
             linkLabel5.TabStop = true;
             linkLabel5.Text = "User Profile";
+            linkLabel5.LinkClicked += linkLabel5_LinkClicked;
             // 
             // linkLabel4
             // 
@@ -214,6 +215,7 @@
             linkLabel1.TabIndex = 1;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Student Profiles";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // label4
             // 

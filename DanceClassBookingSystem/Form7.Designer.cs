@@ -49,6 +49,9 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(593, 468);
             panel3.TabIndex = 4;
+            panel3.Paint += panel3_Paint;
+            panel3.DoubleClick += panel3_DoubleClick;
+            panel3.Leave += panel3_Leave;
             // 
             // button9
             // 
@@ -108,6 +111,7 @@
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Name = "BalletClass";
             Text = "Form7";
+            FormClosing += BalletClass_FormClosing;
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ResumeLayout(false);

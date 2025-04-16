@@ -27,32 +27,37 @@ namespace DanceClassBookingSystem
 
         }
 
+        JazzClass jazz = new JazzClass();
+        BalletClass ballet = new BalletClass();
+        HipHopClass hipHop = new HipHopClass();
+        BallroomClass ballroom = new BallroomClass();
+
         private void button12_Click(object sender, EventArgs e)
         {
-            JazzClass jazz = new JazzClass();
             jazz.Show();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Home newhome = new Home();
+            newhome.Show();
+            this.Hide();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            BalletClass ballet = new BalletClass();
+
             ballet.Show();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            HipHopClass hipHop = new HipHopClass();
             hipHop.Show();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            BallroomClass ballroom = new BallroomClass();
+
             ballroom.Show();
         }
 
@@ -71,8 +76,8 @@ namespace DanceClassBookingSystem
                     Button newClassButton = new Button();
                     newClassButton.Text = className;
                     newClassButton.Size = button8.Size;
-                    newClassButton.Font = button8.Font;
-                    newClassButton.BackColor = button8.BackColor;
+                    newClassButton.Font = button12.Font;
+                    newClassButton.ForeColor = button12.ForeColor;
                     newClassButton.AutoSize = button8.AutoSize;
 
                     newClassButton.Click += (s, args) =>
@@ -123,7 +128,7 @@ namespace DanceClassBookingSystem
 
             newClassButton.Click += (s, e) =>
             {
-                var classForm = new DynamicClassForm(className); // replace with your class form
+                var classForm = new DynamicClassForm(className); // replace with class form
                 classForm.ShowDialog();
             };
 
@@ -140,14 +145,14 @@ namespace DanceClassBookingSystem
                     string className = popup.ClassName;
 
                     // 1. Get the index of the add button
-                    int index = flowLayoutPanel1.Controls.GetChildIndex(button8);
+                    int index = flowLayoutPanel1.Controls.GetChildIndex(button7);
 
                     // 2. Create new button
                     Button newClassButton2 = new Button();
                     newClassButton2.Text = className;
                     newClassButton2.Size = button7.Size;
-                    newClassButton2.Font = button7.Font;
-                    newClassButton2.BackColor = button7.BackColor;
+                    newClassButton2.Font = button12.Font;
+                    newClassButton2.ForeColor = button12.ForeColor;
                     newClassButton2.AutoSize = button7.AutoSize;
 
                     newClassButton2.Click += (s, args) =>
@@ -167,6 +172,26 @@ namespace DanceClassBookingSystem
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Would you like to sign out?", "Confirm Sign Out", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (result == DialogResult.OK)
+            {
+                Login newlogin = new Login();
+                newlogin.Show();
+                this.Close();
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ClassCat newCat = new ClassCat();
+            newCat.Show();
+            this.Hide();
         }
     }
 }

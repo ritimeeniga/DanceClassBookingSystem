@@ -88,6 +88,7 @@
             Controls.Add(panel3);
             Name = "JazzClass";
             Text = "JazzClass";
+            FormClosing += JazzClass_FormClosing;
             Load += Form6_Load;
             panel3.ResumeLayout(false);
             ResumeLayout(false);

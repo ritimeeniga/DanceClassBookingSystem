@@ -36,19 +36,19 @@
             // 
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(69, 26);
+            listBox1.Location = new Point(29, 22);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(120, 94);
+            listBox1.Size = new Size(279, 154);
             listBox1.TabIndex = 0;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // button1
             // 
-            button1.Location = new Point(42, 202);
+            button1.Location = new Point(29, 209);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(109, 23);
             button1.TabIndex = 1;
-            button1.Text = "button1";
+            button1.Text = "Choose Student";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -57,7 +57,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(223, 211, 245);
-            ClientSize = new Size(469, 390);
+            ClientSize = new Size(352, 271);
             Controls.Add(button1);
             Controls.Add(listBox1);
             Name = "StudentPicker";
